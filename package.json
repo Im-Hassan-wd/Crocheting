@@ -1,10 +1,11 @@
 {
-  "name": "chic Crochet",
+  "name": "~by_Chiccrochet",
   "version": "1.0.0",
-  "description": "<h1 align='center'>chic Crochet</h1>",
+  "description": "<h1 align='center'>~by_Chiccrochet</h1>",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "build": "npx tailwindcss -i src/styles.css -o public/styles.css"
   },
   "author": "",
   "license": "ISC",
