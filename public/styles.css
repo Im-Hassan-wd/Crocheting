@@ -506,6 +506,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 0.75rem;
 }
 
+.my-2{
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .mt-3{
   margin-top: 0.75rem;
 }
@@ -516,6 +521,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .ml-2{
   margin-left: 0.5rem;
+}
+
+.mt-12{
+  margin-top: 3rem;
 }
 
 .block{
@@ -578,6 +587,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.items-end{
+  align-items: flex-end;
+}
+
 .items-center{
   align-items: center;
 }
@@ -610,6 +623,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-radius: 9999px;
 }
 
+.rounded-r-full{
+  border-top-right-radius: 9999px;
+  border-bottom-right-radius: 9999px;
+}
+
 .border{
   border-width: 1px;
 }
@@ -637,6 +655,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-secondary-100{
   --tw-bg-opacity: 1;
   background-color: rgb(226 226 223 / var(--tw-bg-opacity));
+}
+
+.bg-yellow-300{
+  --tw-bg-opacity: 1;
+  background-color: rgb(253 224 71 / var(--tw-bg-opacity));
 }
 
 .object-cover{
@@ -670,6 +693,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .px-1{
   padding-left: 0.25rem;
   padding-right: 0.25rem;
+}
+
+.px-3{
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
 .text-center{
