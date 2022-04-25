@@ -1,0 +1,16 @@
+{
+  "name": "chic Crochet",
+  "version": "1.0.0",
+  "description": "<h1 align='center'>chic Crochet</h1>",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.7",
+    "express": "^4.17.3",
+    "tailwindcss": "^3.0.24"
+  }
+}
