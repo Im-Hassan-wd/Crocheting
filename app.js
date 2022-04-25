@@ -1,5 +1,5 @@
 const express = require('express');
-const { home_get } = require('./controllers/controller');
+const { home_get, login_get } = require('./controllers/controller');
 
 const app = express();
 app.listen(3000, () => console.log('listening on port 3000'));
@@ -12,3 +12,4 @@ app.use(express.static('public'));
 
 // routes 
 app.get('/', home_get);
+app.get('/login', login_get);

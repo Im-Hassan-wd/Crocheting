@@ -708,10 +708,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   text-align: center;
 }
 
-.font-nunito{
-  font-family: Nunito Sans;
-}
-
 .font-anek{
   font-family: Anek Tamil;
 }
@@ -808,6 +804,32 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1rem;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.input{
+  width: 18rem;
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.input:focus{
+  outline-style: solid;
+  outline-width: 1px;
+  outline-color: #f8fafc;
+}
+
+.btn{
+  cursor: pointer;
+  border-radius: 0.125rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
 }
 
 .hover\:bg-gray-100:hover{

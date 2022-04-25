@@ -16,3 +16,11 @@
 .badge {
   @apply flex items-center text-xs uppercase font-bold rounded-r-full px-1 py-1 absolute top-0 mt-2;
 }
+
+.input {
+  @apply p-2 text-sm w-72 focus:outline focus:outline-1 focus:outline-slate-50;
+}
+
+.btn {
+  @apply text-xs rounded-sm px-4 py-2 font-bold cursor-pointer tracking-wider;
+}
