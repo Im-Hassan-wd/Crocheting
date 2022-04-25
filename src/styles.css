@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.container {
+  @apply max-w-7xl mx-auto px-5 md:p-2 ;
+}
+
 .card {
   @apply hover:shadow-xl bg-white rounded overflow-hidden shadow-md relative;
 }
