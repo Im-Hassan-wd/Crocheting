@@ -518,6 +518,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 0.5rem;
 }
 
+.my-1{
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.mx-3{
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}
+
 .mt-3{
   margin-top: 0.75rem;
 }
@@ -526,8 +536,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 3rem;
 }
 
+.mb-1{
+  margin-bottom: 0.25rem;
+}
+
+.mt-auto{
+  margin-top: auto;
+}
+
 .ml-2{
   margin-left: 0.5rem;
+}
+
+.mb-auto{
+  margin-bottom: auto;
 }
 
 .flex{
@@ -564,6 +586,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .cursor-pointer{
   cursor: pointer;
+}
+
+.grid-cols-1{
+  grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
 .items-end{
@@ -687,6 +713,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(107 114 128 / var(--tw-text-opacity));
 }
 
+.shadow-inner{
+  --tw-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-colored: inset 0 2px 4px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .container{
   margin-left: auto;
   margin-right: auto;
@@ -703,6 +735,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .card{
   position: relative;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   border-radius: 0.25rem;
   --tw-bg-opacity: 1;
@@ -760,6 +794,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 768px){
+  .md\:mx-8{
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
   .md\:hidden{
     display: none;
   }
@@ -768,8 +807,18 @@ Ensure the default browser behavior of the `hidden` attribute.
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
+  .md\:grid-cols-3{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .md\:text-4xl{
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px){
+  .lg\:grid-cols-4{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
