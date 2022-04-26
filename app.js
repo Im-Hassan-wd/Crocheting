@@ -1,7 +1,8 @@
+const uri = require('./db/DBURI');
 const express = require('express');
 const mongoose = require('mongoose');
 const authRoutes = require('./routes/authRoutes');
-const uri = require('./db/DBURI');
+const cookieParser = require('cookie-parser');
 
 const PORT = process.env.PORT || 3000
 
@@ -12,7 +13,8 @@ app.set('view engine', 'ejs');
 
 // middle ware and static files
 app.use(express.static('public'));
-app.use(express.json({}))
+app.use(express.json({}));
+app.use(cookieParser());
 
 // database connection
 const dbURI =  uri;
