@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const { isEmail } = require('validator');
+const bcrypt = require('bcrypt');
 
 const userSchema = new mongoose.Schema({
   email: {
@@ -15,6 +16,13 @@ const userSchema = new mongoose.Schema({
     minlength: [6, 'Minimum paasword length is 6 characters']
   }
 });
+
+// hashing users password (hash table)
+userSchema.pre('save', async function (next) {
+  const salt = await bcrypt.genSalt();
+  this.password = await bcrypt.hash(this.password, salt);
+  next();
+})
 
 const User = mongoose.model('user', userSchema);
 
