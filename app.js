@@ -14,10 +14,10 @@ app.use(express.static('public'));
 
 // routes 
 app.get('/', home_get);
+app.get('/signup', signup_get);
+app.get('/signup', signup_post);
 app.get('/login', login_get);
 app.post('/login', login_post);
-app.get('/logout', logout_get);
-app.get('/logout', logout_post);
 
 // eror 404
 app.use((req, res) => res.status(404).render('404', { title: "404 Not Found"}));
