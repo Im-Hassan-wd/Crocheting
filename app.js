@@ -1,5 +1,7 @@
 const express = require('express');
-const { home_get, login_get, login_post, signup_get, signup_post } = require('./controllers/controller');
+const mongoose = require('mongoose');
+const authRoutes = require('./routes/authRoutes');
+const uri = require('./db/DBURI');
 
 const PORT = process.env.PORT || 3000
 
@@ -10,9 +12,10 @@ app.set('view engine', 'ejs');
 
 // middle ware and static files
 app.use(express.static('public'));
+app.use(express.json({}))
 
 // database connection
-const dbURI = "mongodb+srv://weird:test123@cluster0.ud8op.mongodb.net/chicrochet" 
+const dbURI =  uri;
 mongoose.connect(dbURI)
   .then((result) => {
     app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
@@ -20,11 +23,8 @@ mongoose.connect(dbURI)
   .catch((err) => console.log(err));
 
 // routes 
-app.get('/', home_get);
-app.get('/signup', signup_get);
-app.get('/signup', signup_post);
-app.get('/login', login_get);
-app.post('/login', login_post);
+app.get('/', (req, res) => res.render('home', { title: "Home" }))
+app.use(authRoutes);
 
 // eror 404
 app.use((req, res) => res.status(404).render('404', { title: "404 Not Found"}));
