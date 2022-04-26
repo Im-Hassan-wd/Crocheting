@@ -1,5 +1,5 @@
 const express = require('express');
-const { home_get, login_get, login_post, logout_get, logout_post } = require('./controllers/controller');
+const { home_get, login_get, login_post, signup_get, signup_post } = require('./controllers/controller');
 
 const PORT = process.env.PORT || 3000
 
