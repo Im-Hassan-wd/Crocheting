@@ -17,4 +17,4 @@ app.get('/', home_get);
 app.get('/login', login_get);
 
 // eror 404
-app.use((req, res) => res.status(404).render('404'));
+app.use((req, res) => res.status(404).render('404', { title: "404 Not Found"}));

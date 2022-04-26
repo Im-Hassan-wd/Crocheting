@@ -510,6 +510,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin: 1rem;
 }
 
+.my-20{
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
 .my-5{
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
@@ -545,12 +550,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: 0.5rem;
 }
 
-.mb-6{
-  margin-bottom: 1.5rem;
-}
-
 .mb-5{
   margin-bottom: 1.25rem;
+}
+
+.mr-5{
+  margin-right: 1.25rem;
+}
+
+.mb-6{
+  margin-bottom: 1.5rem;
 }
 
 .mb-2{
@@ -607,6 +616,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .items-center{
   align-items: center;
+}
+
+.justify-end{
+  justify-content: flex-end;
+}
+
+.justify-center{
+  justify-content: center;
 }
 
 .justify-between{
@@ -682,22 +699,27 @@ Ensure the default browser behavior of the `hidden` attribute.
      object-fit: cover;
 }
 
-.p-2{
-  padding: 0.5rem;
-}
-
 .p-1{
   padding: 0.25rem;
 }
 
-.px-2{
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+.p-2{
+  padding: 0.5rem;
+}
+
+.px-1{
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
 }
 
 .py-1{
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
+}
+
+.px-2{
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .pb-3{
@@ -709,7 +731,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .font-anek{
-  font-family: Anek Tamil;
+  font-family: Anek Tamil, san serif;
 }
 
 .text-3xl{
@@ -771,6 +793,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .card{
   position: relative;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
   display: flex;
   flex-direction: column;
   overflow: hidden;

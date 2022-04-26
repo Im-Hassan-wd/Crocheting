@@ -10,7 +10,7 @@
 }
 
 .card {
-  @apply flex flex-col hover:shadow-xl bg-white rounded overflow-hidden shadow-md relative;
+  @apply flex flex-col hover:shadow-xl bg-white rounded overflow-hidden shadow-md relative my-5;
 }
 
 .badge {
