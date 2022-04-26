@@ -20,7 +20,7 @@
       <label class='block mb-5'>
         <span class='block mb-2'>password:</span>
         <input class='input' type="password" name="password"/>
-        <div class="password error text-sm italic text-red-400 tracking-wider">error</div>
+        <div class="password error text-sm italic text-red-400 tracking-wider"></div>
       </label>
 
       <button class="btn">Signup</button>
@@ -34,8 +34,10 @@
       e.preventDefault();
 
       // get the form value
-      const email = form['email'].value
-      const password = form['password'].value
+      const email = form.email.value
+      const password = form.password.value
+
+      console.log(email, password)
     })
   </script>
 </body>
