@@ -1,22 +1,27 @@
 {
   "name": "~by_Chiccrochet",
   "version": "1.0.0",
-  "description": "<h1 align='center'>~by_Chiccrochet</h1>",
+  "description": "<h1 align='center'>chic Crochet</h1>",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
-    "build": "npx tailwindcss -i src/styles.css -o public/styles.css"
+    "start": "node app.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Im-Hassan-wd/Crocheting.git"
+  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Im-Hassan-wd/Crocheting/issues"
+  },
+  "homepage": "https://github.com/Im-Hassan-wd/Crocheting#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
-    "cookie-parser": "^1.4.6",
     "ejs": "^3.1.7",
-    "express": "^4.17.3",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.2.9",
-    "tailwindcss": "^3.0.24",
+    "express": "^4.18.0",
+    "mongoose": "^6.3.1",
     "validator": "^13.7.0"
   }
 }
