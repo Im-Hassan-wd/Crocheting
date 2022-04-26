@@ -1,5 +1,5 @@
 const express = require('express');
-const { home_get, login_get, login_post } = require('./controllers/controller');
+const { home_get, login_get, login_post, logout_get, logout_post } = require('./controllers/controller');
 
 const PORT = process.env.PORT || 3000
 
@@ -16,6 +16,8 @@ app.use(express.static('public'));
 app.get('/', home_get);
 app.get('/login', login_get);
 app.post('/login', login_post);
+app.get('/logout', logout_get);
+app.get('/logout', logout_post);
 
 // eror 404
 app.use((req, res) => res.status(404).render('404', { title: "404 Not Found"}));
