@@ -5,8 +5,10 @@ const handleErrors = (err) => {
   let errors = { email: '', password: '' };
 
   // validation errors
-  if(err.message.include('user validation failed')){
-    console.log(err);
+  if(err.message.includes('user validation failed')){
+    Object.values(err.errors).forEach(error => {
+      console.log(error.properties);
+    });
   }
 }
 
