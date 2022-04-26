@@ -15,7 +15,7 @@ module.exports = {
       },
       fontFamily: {
         nunito: ['Nunito Sans'],
-        anek: ['Anek Tamil']
+        anek: ['Anek Tamil', 'san serif']
       }
     },
   },
