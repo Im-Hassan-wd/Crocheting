@@ -4,13 +4,20 @@ const { home_get, login_get, login_post, signup_get, signup_post } = require('./
 const PORT = process.env.PORT || 3000
 
 const app = express();
-app.listen(PORT, () => console.log(`Listening on port ${ PORT }`));
 
 // register view engine
 app.set('view engine', 'ejs');
 
 // middle ware and static files
 app.use(express.static('public'));
+
+// database connection
+const dbURI = "mongodb+srv://weird:test123@cluster0.ud8op.mongodb.net/chicrochet" 
+mongoose.connect(dbURI)
+  .then((result) => {
+    app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
+  })
+  .catch((err) => console.log(err));
 
 // routes 
 app.get('/', home_get);
