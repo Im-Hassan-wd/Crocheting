@@ -25,6 +25,7 @@ const checkUser = (req, res, next) => {
   if (token) {
     jwt.verify(token, 'chiccrochet user secret', async (err, decodedToken) => {
       if (err) {
+        res.locals.user = null;
         next();
       } else {
         let user = await User.findById(decodedToken.id);
@@ -32,7 +33,10 @@ const checkUser = (req, res, next) => {
         next();
       }
     });
+  } else {
+    res.locals.user = null;
+    next();
   }
 }
 
-module.exports = { requireAuth };
+module.exports = { requireAuth, checkUser };

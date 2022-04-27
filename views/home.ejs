@@ -17,9 +17,13 @@
             </a>
           </h1>
     
-          <div>
-            <a href="/login" class="text-bold mr-3 hover:shadow-lg">Login</a>
-            <a href="/signout" class="border border-gray-100 rounded py-1 px-2 hover:bg-gray-100 hover:text-gray-600 font-semibold">Sign out</a>
+          <div class="flex items-center">
+            <% if (user) { %>
+              <li class="mr-2 text-xm">Welcome, <%= user.email %></li>
+              <a href="/signout" class="border border-gray-100 rounded py-1 px-2 hover:bg-gray-100 hover:text-gray-600 font-semibold">Sign out</a>
+            <% } else { %>
+              <a href="/login" class="text-bold mr-3 hover:shadow-lg">Login</a>
+            <% } %>
           </div>
         </nav>
       </header>

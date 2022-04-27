@@ -3,7 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const authRoutes = require('./routes/authRoutes');
 const cookieParser = require('cookie-parser');
-const { requireAuth } = require('./middleware/authMiddleware');
+const { requireAuth, checkUser } = require('./middleware/authMiddleware');
 
 const PORT = process.env.PORT || 3000
 
@@ -26,6 +26,7 @@ mongoose.connect(dbURI)
   .catch((err) => console.log(err));
 
 // routes 
+app.get('*', checkUser);
 app.get('/', requireAuth, (req, res) => res.render('home', { title: "Home" }))
 app.use(authRoutes);
 
