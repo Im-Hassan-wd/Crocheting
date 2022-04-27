@@ -14,13 +14,13 @@
       <label class='block mb-5'>
         <span class='block mb-2'>email:</span>
         <input class='input' type="text" name="email"/>
-        <div class="email error text-sm text-red-400 tracking-wider"></div>
+        <div class="email error mt-2 text-sm text-red-400 tracking-wider"></div>
       </label>
 
       <label class='block mb-5'>
         <span class='block mb-2'>password:</span>
         <input class='input' type="password" name="password"/>
-        <div class="password error text-sm text-red-500 tracking-wider"></div>
+        <div class="password error mt-2 text-sm text-red-500 tracking-wider"></div>
       </label>
 
       <button class="btn">login</button>
@@ -31,6 +31,7 @@
     const form = document.querySelector('form');
     const emailError = document.querySelector('.email.error');
     const passwordError = document.querySelector('.password.error');
+    const btn = document.querySelector('button')
 
     form.addEventListener('submit', async e => {
       e.preventDefault();
@@ -50,13 +51,15 @@
           headers: { 'Content-Type': 'application/json'}
         });
         const data = await res.json();
-        console.log(data);
+        btn.textContent = 'Loading...';
         if(data.errors){
+          btn.textContent = 'Login';
           emailError.textContent = data.errors.email;
           passwordError.textContent = data.errors.password;
         }
         if(data.user){
-          // location.assign('/');
+          location.assign('/');
+          btn.textContent = 'Loading...';
         }
       }
       catch(err) {
