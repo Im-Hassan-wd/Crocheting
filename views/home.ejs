@@ -17,12 +17,12 @@
             </a>
           </h1>
     
-          <div class="flex items-center">
+          <div class="block sm:flex sm:items-center">
             <% if (user) { %>
-              <li class="mr-2 text-xm">Welcome, <%= user.email %></li>
-              <a href="/signout" class="border border-gray-100 rounded py-1 px-2 hover:bg-gray-100 hover:text-gray-600 font-semibold">Sign out</a>
+              <li class="mr-2 my-5 sm:my-0 text-sm">Welcome, <%= user.email %></li>
+              <a href="/signout" class="border border-gray-100 rounded py-1 px-2 hover:bg-gray-100 hover:text-gray-600 font-semibold uppercase">Sign out</a>
             <% } else { %>
-              <a href="/login" class="text-bold mr-3 hover:shadow-lg">Login</a>
+              <a href="/login" class="text-bold mr-3 hover:shadow-lg uppercase">Login</a>
             <% } %>
           </div>
         </nav>
@@ -41,7 +41,7 @@
           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 gap-x-10 mt-12 mx-3 md:mx-8">
             <!-- card goes here-->
             <a href="#" class="card"><!-- card -->
-              <img src="./img/5.jpeg" alt="crochet" class="w-full h-48 sm:h-48 object-cover">
+              <img src="./img/7.jpeg" alt="crochet" class="w-full h-48 sm:h-48 object-cover">
               <div class="m-4 mb-1">
                 <h3 class="font-bold mb-0">Learn Crocheting for beginners.</h3>
                 <span class="flex items-center my-2">
