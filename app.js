@@ -1,4 +1,4 @@
-const uri = require('./db/DBURI');
+// const uri = require('./db/DBURI');
 const express = require('express');
 const mongoose = require('mongoose');
 const authRoutes = require('./routes/authRoutes');
@@ -17,7 +17,7 @@ app.use(express.json({}));
 app.use(cookieParser());
 
 // database connection
-const dbURI =  uri;
+const dbURI =  "mongodb+srv://weird:test123@cluster0.ud8op.mongodb.net/chicrochet";
 mongoose.connect(dbURI)
   .then((result) => {
     app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
