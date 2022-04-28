@@ -575,56 +575,32 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 0.5rem;
 }
 
-.mb-5{
-  margin-bottom: 1.25rem;
-}
-
 .ml-10{
   margin-left: 2.5rem;
-}
-
-.mb-6{
-  margin-bottom: 1.5rem;
-}
-
-.mr-5{
-  margin-right: 1.25rem;
-}
-
-.mt-20{
-  margin-top: 5rem;
 }
 
 .mt-10{
   margin-top: 2.5rem;
 }
 
-.mt-3{
-  margin-top: 0.75rem;
+.mb-7{
+  margin-bottom: 1.75rem;
+}
+
+.mb-5{
+  margin-bottom: 1.25rem;
 }
 
 .mt-5{
   margin-top: 1.25rem;
 }
 
-.mb-7{
-  margin-bottom: 1.75rem;
-}
-
 .block{
   display: block;
 }
 
-.inline{
-  display: inline;
-}
-
 .flex{
   display: flex;
-}
-
-.inline-flex{
-  display: inline-flex;
 }
 
 .grid{
@@ -675,22 +651,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-width: 64rem;
 }
 
-.max-w-md{
-  max-width: 28rem;
-}
-
-.max-w-sm{
-  max-width: 24rem;
-}
-
-.max-w-3xl{
-  max-width: 48rem;
-}
-
-.max-w-xl{
-  max-width: 36rem;
-}
-
 .cursor-pointer{
   cursor: pointer;
 }
@@ -699,20 +659,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
-.flex-col{
-  flex-direction: column;
-}
-
-.items-start{
-  align-items: flex-start;
-}
-
 .items-center{
   align-items: center;
-}
-
-.justify-end{
-  justify-content: flex-end;
 }
 
 .justify-center{
@@ -734,10 +682,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .gap-x-10{
   -moz-column-gap: 2.5rem;
        column-gap: 2.5rem;
-}
-
-.self-start{
-  align-self: flex-start;
 }
 
 .rounded{
@@ -837,10 +781,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 0.5rem;
 }
 
-.pb-3{
-  padding-bottom: 0.75rem;
-}
-
 .pb-2{
   padding-bottom: 0.5rem;
 }
@@ -932,8 +872,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: auto;
   margin-right: auto;
   max-width: 80rem;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
 @media (min-width: 768px){
