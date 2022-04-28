@@ -50,15 +50,15 @@
           headers: { 'Content-Type': 'application/json'}
         });
         const data = await res.json();
-        btn.textContent = 'Loading...';
+        btn.textContent = 'Logging in...';
         if(data.errors){
           btn.textContent = 'Login';
           emailError.textContent = data.errors.email;
           passwordError.textContent = data.errors.password;
         }
         if(data.user){
+          btn.textContent = 'Logged in...';
           location.assign('/');
-          btn.textContent = 'Loading...';
         }
       }
       catch(err) {
