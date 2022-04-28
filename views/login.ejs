@@ -9,10 +9,10 @@
       </a>
     </h1>
 
-    <form class="ml-10 items-center mt-10 flex justify-center items-center">
+    <form class="ml-10 mt-10 flex justify-center items-center">
       <div class="">
         <h2 class='text-2xl font-bold mb-2 border-b border-gray-200 text-center'>Get 1 free month of Chiccrochet.</h2>
-        <p class="font-light text-xl text-center mb-5">Just login to continue</p>
+        <p class="font-light text-xl text-center mb-7">Just login to continue</p>
   
         <label class='block mb-5'>
           <!-- <span class='block mb-2'>email:</span> -->
@@ -67,7 +67,7 @@
           passwordError.textContent = data.errors.password;
         }
         if(data.user){
-          btn.textContent = 'Logged in...';
+          btn.textContent = 'Logging in...';
           location.assign('/');
         }
       }

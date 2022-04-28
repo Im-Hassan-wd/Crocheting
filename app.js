@@ -27,7 +27,7 @@ mongoose.connect(dbURI)
 
 // routes 
 app.get('*', checkUser);
-app.get('/', (req, res) => res.render('home', { title: "Home" }))
+app.get('/', requireAuth, (req, res) => res.render('home', { title: "Home" }))
 app.use(authRoutes);
 
 // eror 404

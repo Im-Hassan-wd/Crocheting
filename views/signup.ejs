@@ -55,10 +55,10 @@
         if(data.errors){
           emailError.textContent = data.errors.email;
           passwordError.textContent = data.errors.password;
-          btn.textContent = 'Sign up...';
+          btn.textContent = 'Sign up';
         }
         if(data.user){
-          btn.textContent = 'Signed up...';
+          btn.textContent = 'Signing up...';
           location.assign('/');
         }
       }
