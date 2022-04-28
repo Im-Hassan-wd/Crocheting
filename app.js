@@ -21,13 +21,13 @@ app.use(cookieParser());
 const dbURI =  "mongodb+srv://weird:test123@cluster0.ud8op.mongodb.net/chicrochet";
 mongoose.connect(dbURI)
   .then((result) => {
-    app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
+    app.listen(PORT, () => console.log(`Listening on port ${ PORT }`));
   })
   .catch((err) => console.log(err));
 
 // routes 
 app.get('*', checkUser);
-app.get('/', requireAuth, (req, res) => res.render('home', { title: "Home" }))
+app.get('/', (req, res) => res.render('home', { title: "Home" }))
 app.use(authRoutes);
 
 // eror 404

@@ -14,7 +14,7 @@
 }
 
 .badge {
-  @apply flex items-center text-xs uppercase font-bold rounded-r-full px-1 py-1 absolute top-0 mt-2;
+  @apply flex items-center text-xs uppercase font-bold rounded-r-full px-1 py-1 absolute top-0 mt-2 pr-2;
 }
 
 .input {
