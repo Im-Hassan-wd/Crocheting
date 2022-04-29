@@ -21,6 +21,12 @@
         </label>
   
         <label class='block mb-5'>
+          <!-- <span class='block mb-2'>email:</span> -->
+          <input class='input' type="text" name="prefered_name" placeholder="Prefered Name"/>
+          <div class="name error mt-2 text-sm text-red-400 tracking-wider"></div>
+        </label>
+  
+        <label class='block mb-5'>
           <!-- <span class='block mb-2'>password:</span> -->
           <input class='input' type="password" name="password" placeholder="Password"/>
           <div class="password error mt-2 text-sm text-red-500 tracking-wider"></div>
@@ -36,6 +42,7 @@
     const form = document.querySelector('form');
     const emailError = document.querySelector('.email.error');
     const passwordError = document.querySelector('.password.error');
+    const NameError = document.querySelector('.name.error');
     const btn = document.querySelector('button');
 
     form.addEventListener('submit', async (e) => {
@@ -44,15 +51,18 @@
       // reset errors
       emailError.textContent = '';
       passwordError.textContent = '';
-
+      NameError.textContent = '';
+      
       // get the form value
-      const email = form.email.value
-      const password = form.password.value
-
+      const email = form.email.value;
+      const password = form.password.value;
+      const prefered_name = form.prefered_name.value;
+      console.log(prefered_name)
+      
       try{
         const res = await fetch('/signup', {
           method: 'POST',
-          body: JSON.stringify({ email, password }),
+          body: JSON.stringify({ email, password, prefered_name }),
           headers: { 'Content-Type': 'application/json'}
         });
         const data = await res.json();
@@ -60,6 +70,7 @@
         if(data.errors){
           emailError.textContent = data.errors.email;
           passwordError.textContent = data.errors.password;
+          NameError.textContent = data.errors.prefered_name;
           btn.textContent = 'Sign up';
         }
         if(data.user){

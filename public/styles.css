@@ -506,6 +506,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 }
 
+.col-span-2{
+  grid-column: span 2 / span 2;
+}
+
+.col-span-1{
+  grid-column: span 1 / span 1;
+}
+
 .m-4{
   margin: 1rem;
 }
@@ -676,6 +684,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
+.grid-cols-3{
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .items-center{
   align-items: center;
 }
@@ -800,6 +812,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .pb-2{
   padding-bottom: 0.5rem;
+}
+
+.pb-3{
+  padding-bottom: 0.75rem;
 }
 
 .text-center{

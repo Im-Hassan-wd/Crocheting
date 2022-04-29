@@ -2,7 +2,7 @@ const User = require('../models/User');
 const jwt = require('jsonwebtoken');
 
 const handleErrors = (err) => {
-  let errors = { email: '', password: '' };
+  let errors = { email: '', password: '', preferred_name: '' };
 
   // duplicate error code
   if(err.code === 11000){
@@ -49,10 +49,10 @@ module.exports.login_get = (req, res) => {
 }
 
 module.exports.signup_post = async (req, res) => {
-  const { email, password } = req.body;
+  const { email, password, prefered_name } = req.body;
 
   try {
-    const user = await User.create({ email, password });
+    const user = await User.create({ email, password, prefered_name });
     const token = createToken(user._id);
     res.cookie('jwt', token, { httpOnly: true, maxAge: expiry * 1000});
     res.status(201).json({ user: user._id });
