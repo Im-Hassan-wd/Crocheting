@@ -506,6 +506,26 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 }
 
+.order-2{
+  order: 2;
+}
+
+.order-1{
+  order: 1;
+}
+
+.-order-1{
+  order: -1;
+}
+
+.order-last{
+  order: 9999;
+}
+
+.-order-1{
+  order: -1;
+}
+
 .col-span-2{
   grid-column: span 2 / span 2;
 }
@@ -702,6 +722,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-width: 20rem;
 }
 
+.max-w-md{
+  max-width: 28rem;
+}
+
 .cursor-pointer{
   cursor: pointer;
 }
@@ -830,6 +854,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .p-5{
   padding: 1.25rem;
+}
+
+.p-7{
+  padding: 1.75rem;
 }
 
 .px-1{
@@ -1118,9 +1146,25 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 768px){
+  .md\:order-1{
+    order: 1;
+  }
+
+  .md\:order-first{
+    order: -9999;
+  }
+
+  .md\:order-2{
+    order: 2;
+  }
+
   .md\:mx-8{
     margin-left: 2rem;
     margin-right: 2rem;
+  }
+
+  .md\:grid{
+    display: grid;
   }
 
   .md\:grid-cols-3{
