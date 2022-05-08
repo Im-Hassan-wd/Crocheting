@@ -668,6 +668,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 1.25rem;
 }
 
+.h-full{
+  height: 100%;
+}
+
 .w-6{
   width: 1.5rem;
 }
@@ -755,6 +759,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .gap-x-10{
   -moz-column-gap: 2.5rem;
        column-gap: 2.5rem;
+}
+
+.overflow-scroll{
+  overflow: scroll;
+}
+
+.overflow-y-scroll{
+  overflow-y: scroll;
 }
 
 .rounded{
