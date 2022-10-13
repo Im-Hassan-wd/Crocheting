@@ -1,6 +1,6 @@
 <h1 align='center'>chic Crochet</h1>
 
-![screenshot](https://raw.githubusercontent.com/Im-Hassan-wd/Crocheting/master/public/img/chiccrochet.png)
+![screenshot](https://raw.githubusercontent.com/Im-Hassan-wd/Crocheting/master/public/img/chiccrochet.png?token=GHSAT0AAAAAABZ4PJEIEIMXURNSHD2X5I7AY2H3AIQ)
 
 ### Tools
 
