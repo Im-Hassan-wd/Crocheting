@@ -1,6 +1,6 @@
 <h1 align='center'>chic Crochet</h1>
 
-![screenshot](https://raw.githubusercontent.com/Im-Hassan-wd/Ninja-food/master/public/img/recipe.PNG)
+![screenshot](https://raw.githubusercontent.com/Im-Hassan-wd/Crocheting/master/public/img/chiccrochet.png)
 
 ### Tools
 
