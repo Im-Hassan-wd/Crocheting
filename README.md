@@ -22,7 +22,7 @@ https://chiccrochet.herokuapp.com/
 
 # clone this repository to your local machine
 
-$ git clone https://github.com/Im-Hassan-wd/Ninja-food.git
+$ git clone https://github.com/Im-Hassan-wd/Crocheting.git
 
 # run the app
 
